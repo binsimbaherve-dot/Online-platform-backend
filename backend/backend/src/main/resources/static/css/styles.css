@@ -1,0 +1,129 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f7fb;
+  color: #111;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.company-name { font-weight: 700; }
+.motto { font-size: 12px; color: #666; margin-top: 2px; }
+
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-btn {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nav-primary {
+  border-color: #111;
+  background: #111;
+  color: #fff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 22px 18px;
+}
+
+.hero {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.logos {
+  margin-top: 16px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 16px;
+  padding: 16px 20px;
+}
+
+.logo-strip {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.mini-logo {
+  padding: 10px 12px;
+  border: 1px solid #e6e6e6;
+  background: #fafafa;
+  border-radius: 999px;
+}
+
+.cards {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.chip {
+  padding: 6px 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 999px;
+  background: #fafafa;
+}
+
+.footer {
+  padding: 14px 18px;
+  border-top: 1px solid #e6e6e6;
+  background: #ffffff;
+  text-align: center;
+  color: #666;
+}
+
+@media (max-width: 900px) {
+  .cards { grid-template-columns: 1fr; }
+}

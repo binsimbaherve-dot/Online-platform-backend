@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company Homepage</title>
+
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo-box" aria-label="Company logo placeholder">LOGO</div>
+      <div class="brand-text">
+        <div class="company-name">Your Company Name</div>
+        <div class="motto">Your Motto / Tagline</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-btn" type="button">Home</button>
+      <button class="nav-btn" type="button">About</button>
+      <button class="nav-btn" type="button">Products</button>
+      <button class="nav-btn" type="button">Partner</button>
+      <button class="nav-btn" type="button">Contact</button>
+
+      <button class="nav-btn nav-primary" id="cloudPlatformBtn" type="button">
+        Cloud Platform
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main class="container">
+    <section class="hero">
+      <h1>Business Overview</h1>
+      <p>
+        Short public overview of what the company does (2–3 lines). Keep it high-level for now.
+      </p>
+    </section>
+
+    <!-- Floating logos (customers/partners) -->
+    <section class="logos">
+      <h2>Customers & Partners</h2>
+      <div class="logo-strip" aria-label="Floating logo strip">
+        <div class="mini-logo">Logo A</div>
+        <div class="mini-logo">Logo B</div>
+        <div class="mini-logo">Logo C</div>
+        <div class="mini-logo">Logo D</div>
+        <div class="mini-logo">Logo E</div>
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="cards">
+      <article class="card">
+        <h3>Who We Serve</h3>
+        <p>
+          A short description of your customer types (e.g., retailers, logistics, restaurants, etc.).
+        </p>
+        <ul>
+          <li>Customer type 1</li>
+          <li>Customer type 2</li>
+          <li>Customer type 3</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>How We Work</h3>
+        <p>
+          A simple “how it works” description (high-level steps).
+        </p>
+        <ol>
+          <li>Assess needs</li>
+          <li>Deploy solution</li>
+          <li>Support & improve</li>
+        </ol>
+      </article>
+
+      <article class="card">
+        <h3>Product Categories</h3>
+        <p>High-level product categories (keep it broad for now).</p>
+        <div class="chips">
+          <span class="chip">Category 1</span>
+          <span class="chip">Category 2</span>
+          <span class="chip">Category 3</span>
+          <span class="chip">Category 4</span>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Your Company Name</span>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
