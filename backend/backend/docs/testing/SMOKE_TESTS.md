@@ -18,5 +18,6 @@ Fast checks to confirm the build is “alive” after every commit/PR.
 - JS loads (footer year updates).
 - “Cloud Platform” button click shows the placeholder alert/message.
 
+
 ### Basic negative checks
 - Open a nonsense URL like `/does-not-exist` → returns 404 (no stack trace shown to the user).
