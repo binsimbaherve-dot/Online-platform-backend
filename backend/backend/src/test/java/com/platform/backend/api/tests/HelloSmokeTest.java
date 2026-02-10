@@ -1,5 +1,6 @@
 package com.platform.backend.api.tests; // package path for this test
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test; // JUnit 5 test annotation
 
 import org.springframework.beans.factory.annotation.Autowired; // allows Spring to inject MockMvc
@@ -12,6 +13,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content; // assert response body
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status; // assert HTTP status
 
+@Tag("smoke")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT) // start app on a random port for the test
 @AutoConfigureMockMvc // enable MockMvc auto-configuration (Boot 4 package)
 class HelloSmokeTest { // test class
