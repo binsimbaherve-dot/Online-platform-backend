@@ -1,0 +1,37 @@
+services:
+  db:
+    image: postgres:16
+    container_name: platform-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: platformdb
+      POSTGRES_USER: platformuser
+      POSTGRES_PASSWORD: platformpass
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  backend:
+    build:
+      context: ./backend/backend
+      dockerfile: Dockerfile
+    container_name: platform-backend
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/platformdb
+      SPRING_DATASOURCE_USERNAME: platformuser
+      SPRING_DATASOURCE_PASSWORD: platformpass
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    ports:
+      - "8080:8080"
+    networks:
+      - internal
+
+volumes:
+  pgdata:
+
+networks:
+  internal:
+    driver: bridge
