@@ -9,6 +9,9 @@ on:
 jobs:
   backend-tests:
     runs-on: ubuntu-latest
+    
+    env:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
     steps:
       - name: Checkout code
