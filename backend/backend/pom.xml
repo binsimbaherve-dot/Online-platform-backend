@@ -20,54 +20,60 @@
 
     <properties>
         <java.version>21</java.version>
+        <restassured.version>5.5.1</restassured.version>
     </properties>
 
     <dependencies>
 
-	<!-- Web / MVC -->
-	      <dependency>
-		  <groupId>org.springframework.boot</groupId>
-		  <artifactId>spring-boot-starter-web</artifactId>
-	     </dependency>
+        <!-- Web / MVC -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
-	<!-- Database -->
-	<dependency>
-		<groupId>org.postgresql</groupId>
-		<artifactId>postgresql</artifactId>
-		<scope>runtime</scope>
-	</dependency>
+        <!-- Database -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
 
-	<dependency>
-		<groupId>org.flywaydb</groupId>
-		<artifactId>flyway-database-postgresql</artifactId>
-	</dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-database-postgresql</artifactId>
+        </dependency>
 
-	<!-- Dev tools -->
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-devtools</artifactId>
-		<scope>runtime</scope>
-		<optional>true</optional>
-	</dependency>
+        <!-- Dev tools -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
 
-	<!-- ✅ TESTING (THIS FIXES AutoConfigureMockMvc) -->
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-test</artifactId>
-		<scope>test</scope>
-	</dependency>
-	<!-- Forces MockMvc autoconfigure annotations (AutoConfigureMockMvc, WebMvcTest, etc.) -->
-<dependency>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-webmvc-test</artifactId>
-  <scope>test</scope>
-</dependency>
+        <!-- Spring Boot Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
 
+        <!-- Web MVC test support -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc-test</artifactId>
+            <scope>test</scope>
+        </dependency>
 
-	
+        <!-- ✅ RestAssured (API testing) -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${restassured.version}</version>
+            <scope>test</scope>
+        </dependency>
 
-</dependencies>
-
+    </dependencies>
 
     <build>
         <plugins>
